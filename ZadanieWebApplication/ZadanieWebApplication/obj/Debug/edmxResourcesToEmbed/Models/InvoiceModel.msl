@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InvoiceDbModelStoreContainer" CdmEntityContainer="InvoiceDbEntities">
+    <EntitySetMapping Name="carts">
+      <EntityTypeMapping TypeName="InvoiceDbModel.cart">
+        <MappingFragment StoreEntitySet="cart">
+          <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="product" ColumnName="product" />
+          <ScalarProperty Name="box" ColumnName="box" />
+          <ScalarProperty Name="each" ColumnName="each" />
+          <ScalarProperty Name="pound" ColumnName="pound" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="market" ColumnName="market" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="route" ColumnName="route" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_list">
+      <EntityTypeMapping TypeName="InvoiceDbModel.order_list">
+        <MappingFragment StoreEntitySet="order_list">
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="store_id" ColumnName="store_id" />
+          <ScalarProperty Name="ordered_date" ColumnName="ordered_date" />
+          <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="InvoiceDbModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="product1" ColumnName="product" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stores">
+      <EntityTypeMapping TypeName="InvoiceDbModel.store">
+        <MappingFragment StoreEntitySet="store">
+          <ScalarProperty Name="store_id" ColumnName="store_id" />
+          <ScalarProperty Name="store_name" ColumnName="store_name" />
+          <ScalarProperty Name="store_phone" ColumnName="store_phone" />
+          <ScalarProperty Name="store_address" ColumnName="store_address" />
+          <ScalarProperty Name="contact_name" ColumnName="contact_name" />
+          <ScalarProperty Name="contact_phone" ColumnName="contact_phone" />
+          <ScalarProperty Name="store_detail" ColumnName="store_detail" />
+          <ScalarProperty Name="store_fax" ColumnName="store_fax" />
+          <ScalarProperty Name="isMarket" ColumnName="isMarket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

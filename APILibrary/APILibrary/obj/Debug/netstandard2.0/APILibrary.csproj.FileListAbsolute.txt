@@ -1,0 +1,9 @@
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\bin\Debug\netstandard2.0\APILibrary.deps.json
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\bin\Debug\netstandard2.0\APILibrary.dll
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\bin\Debug\netstandard2.0\APILibrary.pdb
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\obj\Debug\netstandard2.0\APILibrary.csprojAssemblyReference.cache
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\obj\Debug\netstandard2.0\APILibrary.AssemblyInfoInputs.cache
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\obj\Debug\netstandard2.0\APILibrary.AssemblyInfo.cs
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\obj\Debug\netstandard2.0\APILibrary.csproj.CoreCompileInputs.cache
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\obj\Debug\netstandard2.0\APILibrary.dll
+C:\VersionControl\Zadanie\Pokus\APILibrary\APILibrary\obj\Debug\netstandard2.0\APILibrary.pdb

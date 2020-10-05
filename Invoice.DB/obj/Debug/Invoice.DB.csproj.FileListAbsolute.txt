@@ -1,0 +1,14 @@
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\invoice_db.mdf
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\invoice_db_log.ldf
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\Invoice.DB.dll.config
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\Invoice.DB.dll
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\Invoice.DB.pdb
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\EntityFramework.dll
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\EntityFramework.xml
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\obj\Debug\Invoice.DB.csproj.CoreCompileInputs.cache
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\obj\Debug\Invoice.DB.csproj.CopyComplete
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\obj\Debug\Invoice.DB.dll
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\obj\Debug\Invoice.DB.pdb
+C:\VersionControl\Zadanie\ZadanieSln\Invoice.DB\obj\Debug\Invoice.DB.csprojAssemblyReference.cache

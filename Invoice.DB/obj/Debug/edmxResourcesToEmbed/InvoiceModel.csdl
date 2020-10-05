@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="invoice_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="cart">
+    <Key>
+      <PropertyRef Name="cart_id" />
+    </Key>
+    <Property Name="cart_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="Int32" Nullable="false" />
+    <Property Name="product" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="box" Type="Int32" Nullable="false" />
+    <Property Name="each" Type="Int32" Nullable="false" />
+    <Property Name="pound" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="market" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="route" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="order_list">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_id" Type="Int32" Nullable="false" />
+    <Property Name="ordered_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="delivery_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="total" Type="Decimal" Precision="13" Scale="2" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="catagory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="subcatagory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="store">
+    <Key>
+      <PropertyRef Name="store_id" />
+    </Key>
+    <Property Name="store_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="store_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="store_phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="store_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="contact_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contact_phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="store_detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="store_fax" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="isMarket" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="invoice_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="carts" EntityType="Self.cart" />
+    <EntitySet Name="order_list" EntityType="Self.order_list" />
+    <EntitySet Name="products" EntityType="Self.product" />
+    <EntitySet Name="stores" EntityType="Self.store" />
+  </EntityContainer>
+</Schema>

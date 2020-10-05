@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="invoice_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="cart">
+          <Key>
+            <PropertyRef Name="cart_id" />
+          </Key>
+          <Property Name="cart_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="order_id" Type="int" Nullable="false" />
+          <Property Name="product" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="box" Type="int" Nullable="false" />
+          <Property Name="each" Type="int" Nullable="false" />
+          <Property Name="pound" Type="int" Nullable="false" />
+          <Property Name="price" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="market" Type="nvarchar" MaxLength="50" />
+          <Property Name="note" Type="nvarchar" MaxLength="255" />
+          <Property Name="route" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="order_list">
+          <Key>
+            <PropertyRef Name="order_id" />
+          </Key>
+          <Property Name="order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="store_id" Type="int" Nullable="false" />
+          <Property Name="ordered_date" Type="date" Nullable="false" />
+          <Property Name="delivery_date" Type="date" Nullable="false" />
+          <Property Name="total" Type="decimal" Precision="13" Scale="2" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product" Type="nvarchar" MaxLength="100" />
+          <Property Name="price" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="note" Type="nvarchar(max)" />
+          <Property Name="catagory" Type="nvarchar" MaxLength="50" />
+          <Property Name="subcatagory" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="store">
+          <Key>
+            <PropertyRef Name="store_id" />
+          </Key>
+          <Property Name="store_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="store_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="store_phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="store_address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="contact_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="contact_phone" Type="nvarchar" MaxLength="15" />
+          <Property Name="store_detail" Type="nvarchar(max)" />
+          <Property Name="store_fax" Type="nvarchar" MaxLength="15" />
+          <Property Name="isMarket" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="invoice_dbModelStoreContainer">
+          <EntitySet Name="cart" EntityType="Self.cart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="order_list" EntityType="Self.order_list" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="store" EntityType="Self.store" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="invoice_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="cart">
+          <Key>
+            <PropertyRef Name="cart_id" />
+          </Key>
+          <Property Name="cart_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="order_id" Type="Int32" Nullable="false" />
+          <Property Name="product" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="box" Type="Int32" Nullable="false" />
+          <Property Name="each" Type="Int32" Nullable="false" />
+          <Property Name="pound" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="market" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="route" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="order_list">
+          <Key>
+            <PropertyRef Name="order_id" />
+          </Key>
+          <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="store_id" Type="Int32" Nullable="false" />
+          <Property Name="ordered_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="delivery_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="total" Type="Decimal" Precision="13" Scale="2" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Decimal" Precision="13" Scale="2" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="catagory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="subcatagory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="store">
+          <Key>
+            <PropertyRef Name="store_id" />
+          </Key>
+          <Property Name="store_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="store_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="store_phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="store_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="contact_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="contact_phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="store_detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="store_fax" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="isMarket" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="invoice_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="carts" EntityType="Self.cart" />
+          <EntitySet Name="order_list" EntityType="Self.order_list" />
+          <EntitySet Name="products" EntityType="Self.product" />
+          <EntitySet Name="stores" EntityType="Self.store" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="invoice_dbModelStoreContainer" CdmEntityContainer="invoice_dbEntities">
+          <EntitySetMapping Name="carts">
+            <EntityTypeMapping TypeName="invoice_dbModel.cart">
+              <MappingFragment StoreEntitySet="cart">
+                <ScalarProperty Name="cart_id" ColumnName="cart_id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="product" ColumnName="product" />
+                <ScalarProperty Name="box" ColumnName="box" />
+                <ScalarProperty Name="each" ColumnName="each" />
+                <ScalarProperty Name="pound" ColumnName="pound" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="market" ColumnName="market" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="route" ColumnName="route" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="order_list">
+            <EntityTypeMapping TypeName="invoice_dbModel.order_list">
+              <MappingFragment StoreEntitySet="order_list">
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="store_id" ColumnName="store_id" />
+                <ScalarProperty Name="ordered_date" ColumnName="ordered_date" />
+                <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
+                <ScalarProperty Name="total" ColumnName="total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="invoice_dbModel.product">
+              <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="subcatagory" ColumnName="subcatagory" />
+                <ScalarProperty Name="catagory" ColumnName="catagory" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="product1" ColumnName="product" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stores">
+            <EntityTypeMapping TypeName="invoice_dbModel.store">
+              <MappingFragment StoreEntitySet="store">
+                <ScalarProperty Name="store_id" ColumnName="store_id" />
+                <ScalarProperty Name="store_name" ColumnName="store_name" />
+                <ScalarProperty Name="store_phone" ColumnName="store_phone" />
+                <ScalarProperty Name="store_address" ColumnName="store_address" />
+                <ScalarProperty Name="contact_name" ColumnName="contact_name" />
+                <ScalarProperty Name="contact_phone" ColumnName="contact_phone" />
+                <ScalarProperty Name="store_detail" ColumnName="store_detail" />
+                <ScalarProperty Name="store_fax" ColumnName="store_fax" />
+                <ScalarProperty Name="isMarket" ColumnName="isMarket" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
